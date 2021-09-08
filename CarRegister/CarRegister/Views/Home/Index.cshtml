@@ -1,0 +1,25 @@
+﻿@model List<Car>
+
+@foreach (var car in Model)
+{
+    <div onclick="getCar('@car.Id')" class="table-bordered car-card">
+        <h6>@car.Brand</h6>
+        <div class="row">
+            <div class="col-4">
+                Model: @car.Model
+            </div>
+            <div class="col-4">
+                Number of Seats: @car.Seats
+            </div>
+            <div class="col-4">
+                Release date: @car.ReleaseDate
+            </div>
+        </div>
+    </div>
+    <hr />
+}
+<script>
+    const getCar = (id) => {
+        window.location = '/Home/GetCar?carId=' + id
+    }
+</script>

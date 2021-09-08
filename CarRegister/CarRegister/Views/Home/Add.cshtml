@@ -1,0 +1,29 @@
+﻿@model Car
+
+<h2>Add Car</h2>
+
+<form asp-controller="Home" asp-action="Save" method="post">
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="@Model.Brand">Brand</label>
+            <input class="form-control" asp-for="@Model.Brand" />
+        </div>
+        <div class="col-6">
+            <label asp-for="@Model.Model">Model</label>
+            <input class="form-control" asp-for="@Model.Model" />
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="@Model.Seats">Seats</label>
+            <input class="form-control" asp-for="@Model.Seats" />
+        </div>
+        <div class="col-6">
+            <label asp-for="@Model.ReleaseDate">Release Date</label>
+            <input class="form-control" asp-for="@Model.ReleaseDate" />
+        </div>
+    </div>
+    <br />
+    <button class="btn btn-primary">Save Car</button>
+</form>
